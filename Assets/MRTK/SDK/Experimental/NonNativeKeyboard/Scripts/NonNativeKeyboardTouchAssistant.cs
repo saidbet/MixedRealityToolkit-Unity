@@ -30,7 +30,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
             clickSoundPlayer.playOnAwake = false;
             clickSoundPlayer.spatialize = true;
             clickSoundPlayer.clip = clickSound;
-            var buttons = GetComponentsInChildren<Button>();
+            var buttons = GetComponentsInChildren<Button>(true);
             foreach (var button in buttons)
             {
                 var ni = button.gameObject.EnsureComponent<NearInteractionTouchableUnityUI>();
